@@ -1,5 +1,7 @@
 # guestbook
 
+TODO: STATUS (AND KOANS TOO)
+
 This is the first exercise of the book:
 
 Web Development with Clojure - by Dmitri Sotnikov

@@ -23,6 +23,21 @@ To start a web server for the application, run:
 
     lein ring server
 
+From LightTable:
+
+* View Connections - Clojure - project.clj
+* CTRL+SPACE - Open Clojure Instarepl
+
+
+    ; run the server
+    (use 'guestbook.repl)
+    (start-server)
+
+    ; create the db
+    (use 'guestbook.models.db)
+    (create-guestbook-table)
+
+
 ## License
 
 See [LICENSE](LICENSE)

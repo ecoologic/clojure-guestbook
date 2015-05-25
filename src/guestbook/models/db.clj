@@ -6,7 +6,7 @@
          :subprotocol "sqlite",
          :subname "db.sq3"})
 
-(defn create-guestbook-table []
+(defn cfeate-guestbook-table []
   (sql/with-connection
     db
     (sql/create-table
@@ -16,3 +16,19 @@
      [:name "TEXT"]
      [:message "TEXT"])
     (sql/do-commands "CREATE INDEX timestamp_index ON guestbook (timestamp)")))
+
+(defn read-guests []
+  (sql/with-connection
+    db
+    (sql/with-query-results res
+      ["select * from guestbook order by timestamp desc"]
+      (doall res))))
+
+(defn save-message [name message]
+  (sql/with-connection
+    db
+    (sql/insert-values
+     :guestbook
+     [:name :message :timestamp]
+     [name message (new java.util.Date)])))
+

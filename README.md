@@ -1,6 +1,6 @@
 # guestbook
 
-TODO: STATUS (AND KOANS TOO)
+TODO: STATUS (AND KOANS TOO, and flashback too)
 
 This is the first exercise of the book:
 
